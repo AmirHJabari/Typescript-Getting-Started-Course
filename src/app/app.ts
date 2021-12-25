@@ -1,6 +1,6 @@
 function startGame() {
     // Start the game
-    const playerName: string = 'Amir';
+    let playerName: string = 'Amir';
     logPlayer(playerName)
 
     let messagesElement = document.getElementById('messages')
