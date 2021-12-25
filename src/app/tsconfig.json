@@ -2,7 +2,8 @@
     "extends": "../tsconfig.base",
     "compilerOptions": {
         "removeComments": true,
-        "outFile": "../js/app.js"
+        "module": "commonjs",
+        "moduleResolution": "Node",
     },
     "files": [
         "app.ts"

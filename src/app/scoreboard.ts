@@ -1,5 +1,6 @@
-/// <reference path="result.ts" />
-class Scoreboard {
+import { Result } from "./result";
+
+export class Scoreboard {
     private _result: Result[] = [];
     
     addResult(newResult: Result): void {
