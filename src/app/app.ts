@@ -1,6 +1,10 @@
+/// <reference path="player.ts" />
+/// <reference path="person.ts" />
+/// <reference path="utility.ts" />
+
 function startGame() {
     // Start the game
-    let playerName: string | undefined = getInputValue('playername');
+    let playerName: string | undefined = Utility.getInputValue('playername');
     logPlayer(playerName)
 
     let messagesElement = document.getElementById('messages')
@@ -12,15 +16,6 @@ function startGame() {
 
 function logPlayer(name: string = 'MultiMath Player'): void {
     console.log(`New game starting for player: ${name}`);
-}
-
-function getInputValue(id: string): string | undefined {
-    const inputElemnt: HTMLInputElement = document.getElementById(id) as HTMLInputElement;
-
-    if (inputElemnt == undefined || inputElemnt.value === '')
-        return undefined;
-    else
-        return inputElemnt.value;
 }
 
 function postScore(score: number, playerName: string = 'MultiMath Player'): void {
